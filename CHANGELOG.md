@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-02-16)
+## Unreleased (2025-06-26)
 
 <section class="features">
 
@@ -24,6 +24,9 @@
 
 <details>
 
+-   [`85a9c18`](https://github.com/stdlib-js/stdlib/commit/85a9c18a4a4edcf9ccfc590137ecc76812e86204) - **chore:** disable lint rule _(by Philipp Burckhardt)_
+-   [`4dba421`](https://github.com/stdlib-js/stdlib/commit/4dba421f5bd8acafdd58e1c7681965b9ad267bc7) - **docs:** minor clean-up _(by Philipp Burckhardt)_
+-   [`b67d4da`](https://github.com/stdlib-js/stdlib/commit/b67d4dac3483903ba9841a9928a0c426635df639) - **refactor:** use base assertion utility _(by Athan Reines)_
 -   [`8d34c0c`](https://github.com/stdlib-js/stdlib/commit/8d34c0c773e51c464e10e67dd9ccef4f95a00f2b) - **feat:** add C implementation for `blas/base/sspr` [(#4491)](https://github.com/stdlib-js/stdlib/pull/4491) _(by Aman Bhansali, Athan Reines, stdlib-bot)_
 -   [`e0cef99`](https://github.com/stdlib-js/stdlib/commit/e0cef995e884021db3001dc1a3cfef0ca7b368c2) - **style:** remove extra spaces for regular expressions in publish script _(by Philipp Burckhardt)_
 -   [`da12183`](https://github.com/stdlib-js/stdlib/commit/da121832eca80c36e1e32929e994fef44ca8a4cc) - **feat:** add `blas/base/dspr` [(#2794)](https://github.com/stdlib-js/stdlib/pull/2794) _(by Aman Bhansali, Athan Reines)_
