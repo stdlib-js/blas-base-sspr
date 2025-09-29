@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-26)
+## Unreleased (2025-09-29)
 
 <section class="features">
 
@@ -24,6 +24,9 @@
 
 <details>
 
+-   [`b7c2031`](https://github.com/stdlib-js/stdlib/commit/b7c20312491bdcf54ffc681e5fe489b9ba3d059c) - **docs:** clean-up TSDoc declaration comments _(by Philipp Burckhardt)_
+-   [`cedc9bb`](https://github.com/stdlib-js/stdlib/commit/cedc9bb0f92c950200128079cac8ab1da99ec7ed) - **docs:** fix example code _(by Philipp Burckhardt)_
+-   [`d559fd7`](https://github.com/stdlib-js/stdlib/commit/d559fd70de9ec9b1d72d22543876f380e4062c69) - **refactor:** update include header guards for single precision real packages [(#7710)](https://github.com/stdlib-js/stdlib/pull/7710) _(by Shabareesh Shetty)_
 -   [`85a9c18`](https://github.com/stdlib-js/stdlib/commit/85a9c18a4a4edcf9ccfc590137ecc76812e86204) - **chore:** disable lint rule _(by Philipp Burckhardt)_
 -   [`4dba421`](https://github.com/stdlib-js/stdlib/commit/4dba421f5bd8acafdd58e1c7681965b9ad267bc7) - **docs:** minor clean-up _(by Philipp Burckhardt)_
 -   [`b67d4da`](https://github.com/stdlib-js/stdlib/commit/b67d4dac3483903ba9841a9928a0c426635df639) - **refactor:** use base assertion utility _(by Athan Reines)_
@@ -42,11 +45,12 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Aman Bhansali
 -   Athan Reines
 -   Philipp Burckhardt
+-   Shabareesh Shetty
 
 </section>
 
