@@ -44,7 +44,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import sspr from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@deno/mod.js';
+import sspr from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@v0.1.0-deno/mod.js';
 ```
 
 #### sspr( order, uplo, N, α, x, sx, AP )
@@ -155,7 +155,7 @@ sspr.ndarray( 'row-major', 'upper', 3, 1.0, x, -1, 2, AP, 1, 0 );
 
 ```javascript
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import sspr from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@deno/mod.js';
+import sspr from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@v0.1.0-deno/mod.js';
 
 var opts = {
     'dtype': 'float32'
