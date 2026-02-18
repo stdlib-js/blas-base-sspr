@@ -2,6 +2,41 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-02-18)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`338737a`](https://github.com/stdlib-js/stdlib/commit/338737a1f9c6f3b88a9bc5338f35dc90dc82b43a) - **bench:** refactor to use string interpolation in `blas/base/sspr` [(#10333)](https://github.com/stdlib-js/stdlib/pull/10333) _(by Prajjwal Bajpai, Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   Prajjwal Bajpai
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.1.1">
 
 ## 0.1.1 (2026-02-08)
