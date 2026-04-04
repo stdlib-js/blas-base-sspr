@@ -37,32 +37,38 @@ limitations under the License.
 
 > Perform the symmetric rank 1 operation `A = α*x*x^T + A`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-sspr
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var sspr = require( '@stdlib/blas-base-sspr' );
+sspr = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var sspr = require( 'path/to/vendor/umd/blas-base-sspr/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.sspr;
+})();
+</script>
 ```
 
 #### sspr( order, uplo, N, α, x, sx, AP )
@@ -171,9 +177,14 @@ sspr.ndarray( 'row-major', 'upper', 3, 1.0, x, -1, 2, AP, 1, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var sspr = require( '@stdlib/blas-base-sspr' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sspr@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float32'
@@ -189,6 +200,11 @@ console.log( AP );
 
 sspr.ndarray( 'column-major', 'upper', N, 1.0, x, 1, 0, AP, 1, 0 );
 console.log( AP );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -197,143 +213,7 @@ console.log( AP );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/base/sspr.h"
-```
-
-#### c_sspr( order, uplo, N, alpha, \*X, strideX, \*AP )
-
-Performs the symmetric rank 1 operation `A = α*x*x^T + A` where `α` is a scalar, `x` is an `N` element vector, and `A` is an `N` by `N` symmetric matrix supplied in packed form.
-
-```c
-#include "stdlib/blas/base/shared.h"
-
-float AP[] = { 1.0f, 2.0f, 3.0f, 1.0f, 2.0f, 1.0f };
-const float x[] = { 1.0f, 2.0f, 3.0f };
-
-c_sspr( CblasColMajor, CblasUpper, 3, 1.0f, x, 1, AP );
-```
-
-The function accepts the following arguments:
-
--   **order**: `[in] CBLAS_LAYOUT` storage layout.
--   **uplo**: `[in] CBLAS_UPLO` specifies whether the upper or lower triangular part of the symmetric matrix `A` should be referenced.
--   **N**: `[in] CBLAS_INT` number of elements along each dimension of `A`.
--   **alpha**: `[in] float` scalar.
--   **X**: `[in] float*` input vector.
--   **strideX**: `[in] CBLAS_INT` stride length for `X`.
--   **AP**: `[inout] float*` packed form of a symmetric matrix `A`.
-
-```c
-void c_sspr( const CBLAS_LAYOUT order, const CBLAS_UPLO uplo, const CBLAS_INT N, const float alpha, const float *X, const CBLAS_INT strideX, float *AP )
-```
-
-#### c_sspr_ndarray( order, uplo, N, alpha, \*X, strideX, offsetX, \*AP, strideAP, offsetAP )
-
-Performs the symmetric rank 1 operation `A = α*x*x^T + A` where `α` is a scalar, `x` is an `N` element vector, and `A` is an `N` by `N` symmetric matrix supplied in packed form using alternative indexing semantics.
-
-```c
-#include "stdlib/blas/base/shared.h"
-
-float AP[] = { 1.0f, 2.0f, 3.0f, 1.0f, 2.0f, 1.0f };
-const float x[] = { 1.0f, 2.0f, 3.0f };
-
-c_sspr_ndarray( CblasColMajor, CblasUpper, 3, 1.0f, x, 1, AP, 1, 0 );
-```
-
-The function accepts the following arguments:
-
--   **order**: `[in] CBLAS_LAYOUT` storage layout.
--   **uplo**: `[in] CBLAS_UPLO` specifies whether the upper or lower triangular part of the symmetric matrix `A` should be referenced.
--   **N**: `[in] CBLAS_INT` number of elements along each dimension of `A`.
--   **alpha**: `[in] float` scalar.
--   **X**: `[in] float*` input vector.
--   **strideX**: `[in] CBLAS_INT` stride length for `X`.
--   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
--   **AP**: `[inout] float*` packed form of a symmetric matrix `A`.
--   **strideAP**: `[in] CBLAS_INT` stride length for `AP`.
--   **offsetAP**: `[in] CBLAS_INT` starting index for `AP`.
-
-```c
-void c_sspr_ndarray( const CBLAS_LAYOUT order, const CBLAS_UPLO uplo, const CBLAS_INT N, const float alpha, const float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, float *AP, const CBLAS_INT strideAP, const CBLAS_INT offsetAP )
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/base/sspr.h"
-#include "stdlib/blas/base/shared.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create strided arrays:
-    float AP[] = { 1.0f, 2.0f, 3.0f, 1.0f, 2.0f, 1.0f };
-    const float x[] = { 1.0f, 2.0f, 3.0f };
-
-    // Specify the number of elements along each dimension of `A`:
-    const int N = 3;
-
-    // Perform the symmetric rank 1 operation `A = α*x*x^T + A`:
-    c_sspr( CblasRowMajor, CblasUpper, N, 1.0f, x, 1, AP );
-
-    // Print the result:
-    for ( int i = 0; i < N*(N+1)/2; i++ ) {
-        printf( "AP[ %i ] = %f\n", i, AP[ i ] );
-    }
-
-    // Perform the symmetric rank 1 operation `A = α*x*x^T + A` using alternative indexing semantics:
-    c_sspr_ndarray( CblasRowMajor, CblasUpper, N, 1.0f, x, 1, 0, AP, 1, 0 );
-
-    // Print the result:
-    for ( int i = 0; i < N*(N+1)/2; i++ ) {
-        printf( "AP[ %i ] = %f\n", i, AP[ i ] );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
