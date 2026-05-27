@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-11)
+## Unreleased (2026-05-27)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302)
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - **fix:** use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302) _(by Philipp Burckhardt)_
 -   [`35566af`](https://github.com/stdlib-js/stdlib/commit/35566af0add64775e60422fd16e50e1bec3947e7) - **docs:** fix C examples in READMEs [(#11229)](https://github.com/stdlib-js/stdlib/pull/11229) _(by anee3, Athan Reines)_
 -   [`9a18a03`](https://github.com/stdlib-js/stdlib/commit/9a18a03e86bfed34475b176b2732303aab09c86c) - **bench:** refactor to use dynamic memory allocation in `blas/base/sspr` [(#10332)](https://github.com/stdlib-js/stdlib/pull/10332) _(by Prajjwal Bajpai)_
 -   [`338737a`](https://github.com/stdlib-js/stdlib/commit/338737a1f9c6f3b88a9bc5338f35dc90dc82b43a) - **bench:** refactor to use string interpolation in `blas/base/sspr` [(#10333)](https://github.com/stdlib-js/stdlib/pull/10333) _(by Prajjwal Bajpai, Philipp Burckhardt)_
