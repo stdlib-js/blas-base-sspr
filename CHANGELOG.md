@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-10)
+## Unreleased (2026-07-13)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`d74c033`](https://github.com/stdlib-js/stdlib/commit/d74c0332b26bbe0924614cca9194ced45934374c) - **refactor:** add support for enums in `blas/base/sspr` [(#13456)](https://github.com/stdlib-js/stdlib/pull/13456) _(by Kaustubh Patange)_
 -   [`ae1746f`](https://github.com/stdlib-js/stdlib/commit/ae1746f9e63bca71e12bce96d3eab5a7bcf37652) - **docs:** fix heading _(by Athan Reines)_
 -   [`ec68ca7`](https://github.com/stdlib-js/stdlib/commit/ec68ca7cc35210db29a028d561ec71968e2ff753) - **docs:** fix TSDoc errors in `blas` declarations [(#12529)](https://github.com/stdlib-js/stdlib/pull/12529) _(by Philipp Burckhardt, Athan Reines)_
 -   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - **fix:** use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302) _(by Philipp Burckhardt)_
@@ -39,9 +40,10 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Kaustubh Patange
 -   Philipp Burckhardt
 -   Prajjwal Bajpai
 -   anee3
